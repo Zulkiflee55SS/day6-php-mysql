@@ -23,6 +23,7 @@ include 'db_connect.php';
                     <th>อีเมล</th>
                     <th>ข้อความ</th>
                     <th>วันที่สร้าง</th>
+                    <th>จัดการ</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,10 +39,14 @@ include 'db_connect.php';
                                 <td>{$row['email']}</td>
                                 <td>{$row['message']}</td>
                                 <td>{$row['created_at']}</td>
+                                <td>
+                                    <a href='edit.php?id={$row['id']}' class='btn edit'> แก้ไข</a>
+                                    <a href='delete.php?id={$row['id']}' class='btn delete' onclick='return confirm(\"แน่ใจว่าต้องการลบ?\")'> ลบ</a>
+                                </td>
                               </tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='5'>ไม่มีข้อมูล</td></tr>";
+                    echo "<tr><td colspan='6'>ไม่มีข้อมูล</td></tr>";
                 }
 
                 $conn->close();

@@ -106,3 +106,20 @@ td, th {
 tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+/* ปุ่มแก้ไข & ลบ */
+.btn.edit {
+    background-color: #ffc107;
+}
+
+.btn.edit:hover {
+    background-color: #e0a800;
+}
+
+.btn.delete {
+    background-color: #dc3545;
+}
+
+.btn.delete:hover {
+    background-color: #c82333;
+}
+
